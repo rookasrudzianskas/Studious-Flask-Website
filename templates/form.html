@@ -10,6 +10,10 @@
 
   <small>PLease confirm your information</small>
   <br><br>
-  {{first_name}} {{last_name}} || {{email}}
+  <ul>
+  {% for subscriber in subscribers %}
+    <li>{{subscriber }}</li>
+  {% endfor %}
+    </ul>
 </div>
 {% endblock %}
