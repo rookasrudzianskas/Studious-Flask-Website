@@ -5,9 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    title = "Rokas Rudzianskas Portfolio"
+    return render_template("index.html", title=title)
 
 
 @app.route('/about')
 def about():
-    return render_template("about.html")
+    title = "About Rokas"
+    names = ["John", "Rokas", "Marry", "Wes", "Sally"]
+    return render_template("about.html", names=names, title=title)
