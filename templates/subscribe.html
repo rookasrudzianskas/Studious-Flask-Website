@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}
+  Subscribe to the email list
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Subscribe To My Newsletter</h1>
+  <br><br>
+
+  <form action="/form" method="POST">
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="First Name" name="first_name" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+      <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Last Name" name="last_name" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+      <div class="mb-3">
+    <input type="email" class="form-control" placeholder="Email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+    <br>
+  <button type="submit" class="btn btn-secondary">Start!</button>
+</form>
+</div>
+{% endblock %}
