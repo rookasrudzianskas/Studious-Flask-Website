@@ -8,15 +8,19 @@
 <div class="container">
     <h1>Friends of mine...</h1>
     <br>
+
     <form action="/friends" method="POST">
-        <input class="orm-label" type="text" placeholder="Name" name="name">
-        <input type="submit" placeholder="Add Name" class="btn btn-secondary">
+        <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Name" name="name"><br>
+                <input type="submit" placeholder="Add Name" class="btn btn-secondary">
+        </div>
     </form>
+
     <br><br>
     {% for friend in friends %}
     <h4>
-        {{ friend.name }}
-    </h4> <br>
+        {{ friend.name }} | <a href="/update/{{ friend.id }}" class="btn btn-outline-secondary btn-sm">Update</a>
+    </h4>
     {% endfor %}
 
     </div>
