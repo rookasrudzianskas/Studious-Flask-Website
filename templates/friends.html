@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+  {{title}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Friends of mine...</h1>
+    <br>
+    <form action="/friends" method="POST">
+        <input class="orm-label" type="text" placeholder="Name" name="name">
+        <input type="submit" placeholder="Add Name" class="btn btn-secondary">
+    </form>
+    <br><br>
+    {% for friend in friends %}
+    <h4>
+        {{ friend.name }}
+    </h4> <br>
+    {% endfor %}
+
+    </div>
+{% endblock %}
