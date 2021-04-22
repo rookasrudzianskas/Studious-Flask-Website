@@ -1,22 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title%}
-  Subscribe to the email list
+  {{ title }}
 {% endblock %}
 
 {% block content %}
 <div class="container">
-
-  {% if error_statement %}
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.   {{ error_statement }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-
-  {% endif %}
-  <h1>Subscribe To My Newsletter</h1>
+  <h1>Error...</h1>
+  {{error_statement}}
   <br><br>
-
 
     <form action="/form" method="POST">
   <div class="mb-3">
@@ -33,5 +25,7 @@
     <br>
   <button type="submit" class="btn btn-secondary">Start!</button>
 </form>
+
+
 </div>
 {% endblock %}
