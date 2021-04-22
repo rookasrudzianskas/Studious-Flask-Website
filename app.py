@@ -35,7 +35,7 @@ def form():
     message = "You have been subscribed to my email newsletter!"
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
-    server.login("adobe.renas@gmail.com", "rokas2020")
+    server.login("", "")
     server.sendmail("adobe.renas@gmail.com", email, message)
 
     if not first_name or not last_name or not email:
