@@ -6,18 +6,30 @@
 
 {% block content %}
 <div class="container">
-    <h1>About me</h1>
-    <ul>
+    <h1>About me</h1><br>
+<table class="table table-dark table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <td>The People list:</td>
+        </tr>
+    </thead>
+
+    <tbody>
     {% for name in names %}
+<tr>
+    <td>
+        {% if name == "Wes" %}
+            Wes is the best!
+        {% else %}
+            {{ name }}
+        {% endif %}
 
-      {% if name == "Wes" %}
-        Wes is the best!
-      {% else %}
-        <li>{{ name }}</li>
-      {% endif %}
+        {% endfor %}
+    </td>
+</tr>
 
-    {% endfor %}
-      </ul>
+    </tbody>
+</table>
 
     </div>
 {% endblock %}

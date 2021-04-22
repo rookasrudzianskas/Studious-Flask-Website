@@ -17,11 +17,30 @@
     </form>
 
     <br><br>
-    {% for friend in friends %}
-    <h4>
-        {{ friend.name }} | <a href="/update/{{ friend.id }}" class="btn btn-outline-secondary btn-sm">Update</a>
-    </h4>
-    {% endfor %}
+    <table class="table table-dark table-striped table-hover table-bordered">
+        <thead>
+        <tr>
+            <td style="font-weight: bold">The Friends list below:</td>
+            <td style="font-weight: bold">Do you want to update it?</td>
+        </tr>
+        </thead>
+        <tbody>
+
+                {% for friend in friends %}
+                <tr>
+                    <td>
+
+                   {{ friend.name }} |
+
+                    </td>
+                    <td>
+                        <a style="display: block; margin-left: auto; margin-right: auto; width: 20%"  href="/update/{{ friend.id }}" class="btn btn-outline-secondary btn-sm">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+        </tbody>
+    </table>
 
     </div>
 {% endblock %}
