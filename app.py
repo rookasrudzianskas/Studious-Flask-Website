@@ -34,6 +34,19 @@ class Friends(db.Model):
 subscribers = []
 
 
+@app.route('/delete/<int:id>')
+def delete(id):
+    friend_to_delete = Friends.query.get_or_404(id)
+
+    try:
+        db.session.delete(friend_to_delete)
+        db.session.commit()
+        return redirect('/friends')
+    except:
+        return "There was a problem deleting that friend"
+
+
+
 @app.route('/update/<int:id>', methods=['POST', 'GET'])
 def update(id):
     friend_to_update = Friends.query.get_or_404(id)

@@ -22,6 +22,7 @@
         <tr>
             <td style="font-weight: bold">The Friends list below:</td>
             <td style="font-weight: bold">Do you want to update it?</td>
+            <td style="font-weight: bold">Do you want to delete it?</td>
         </tr>
         </thead>
         <tbody>
@@ -35,6 +36,10 @@
                     </td>
                     <td>
                         <a style="display: block; margin-left: auto; margin-right: auto; width: 20%"  href="/update/{{ friend.id }}" class="btn btn-outline-secondary btn-sm">Update</a>
+                    </td>
+
+                      <td>
+                        <a style="display: block; margin-left: auto; margin-right: auto; width: 20%"  href="/delete/{{ friend.id }}" class="btn btn-outline-danger btn-sm">Delete</a>
                     </td>
                 </tr>
                 {% endfor %}
